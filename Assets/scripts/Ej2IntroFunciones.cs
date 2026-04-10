@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ej2IntroFunciones : MonoBehaviour
 {
-   public str contraseña;
+   public string contraseña;
 //crear la funcion MensajeAccesoDenegado que escribe en consola eso
 // e implementar las funcionalidades que permitan ingresar por inspector
 // una cadena de caracteres y ejecutar la funcion MensajeBienvenida si
@@ -12,26 +12,18 @@ public class Ej2IntroFunciones : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+    if (contraseña == "TIC2026"){
+        MensajeAccesoAprobado();
     }
-
-void MensajeBienvenida(){
-    Debug.Log("Clash royale");
+    else{
+        MensajeAccesoDenegado();
+    }
 }
+
 void MensajeAccesoAprobado(){
     Debug.Log("Contraseña Correcta");
 }
 void MensajeAccesoDenegado(){
     Debug.Log("Contraseña Incorrecta");
-}
-
-
-void ReconocerContraseña(){
-    if (contraseña == TIC2026){
-        Debug.Log(MensajeAccesoAprobado);
-    }
-    else{
-        Debug.Log(MensajeAccesoDenegado);
-    }
 }
 }
